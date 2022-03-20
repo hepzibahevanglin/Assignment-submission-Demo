@@ -1,0 +1,27 @@
+// i have to create simple app using angular js 
+// i have to download the angular.min.js packages  https://angularjs.org/
+// i have to create one folder upload file angular.min.js and index.html
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title> Demo for a simple angular app</title>
+    <script src="angular.min.js"></script>
+
+</head>
+<body ng-controller="myController">
+    <div>
+    <h3>pls enter your name</h3>
+    Name:<input type="text" ng-model="name" placeholder="enter your name">
+    <p>Hello <strong>{{name}}</strong> !</p>
+    <p>Welcome to myapp</p>
+    </div>
+    <script>
+        var app = angular.module("myapp",[]);
+        app.controller("myController",function($scope){
+            $scope.name="";
+        });
+    </script>
+</body>
+</html>
